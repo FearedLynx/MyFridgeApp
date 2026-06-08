@@ -195,7 +195,14 @@ export default function FridgeScreen() {
     Animated.timing(pulseAnim, { toValue: 1, duration: 150, useNativeDriver: true }).start();
   };
 
-  const handleVoiceStart = async () => {
+  const stopRecording = async () => {
+    if (!Voice) return;
+    try { await Voice.stop(); } catch (_) {}
+    setIsRecording(false);
+    stopPulse();
+  };
+
+  const handleVoiceToggle = async () => {
     if (!Voice) {
       Alert.alert(
         'Voice not available',
@@ -203,25 +210,32 @@ export default function FridgeScreen() {
       );
       return;
     }
+
+    if (isRecording) {
+      await stopRecording();
+      return;
+    }
+
     try {
-      setIsRecording(true);
-      startPulse();
+      // Wire up all event handlers before starting
       Voice.onSpeechResults = (e: any) => {
         const transcript = e.value?.[0] ?? '';
-        processTranscript(transcript);
+        if (transcript) processTranscript(transcript);
+        stopRecording();
       };
-      await Voice.start('en-US');
-    } catch (err) {
-      setIsRecording(false);
-      stopPulse();
-    }
-  };
+      Voice.onSpeechEnd = () => {
+        setIsRecording(false);
+        stopPulse();
+      };
+      Voice.onSpeechError = () => {
+        setIsRecording(false);
+        stopPulse();
+      };
 
-  const handleVoiceStop = async () => {
-    if (!Voice) return;
-    try {
-      await Voice.stop();
-    } finally {
+      await Voice.start('en-US');
+      setIsRecording(true);
+      startPulse();
+    } catch (err) {
       setIsRecording(false);
       stopPulse();
     }
@@ -320,18 +334,17 @@ export default function FridgeScreen() {
           <Animated.View style={{ transform: [{ scale: pulseAnim }] }}>
             <TouchableOpacity
               style={[styles.voiceBtn, isRecording && styles.voiceBtnActive]}
-              onPressIn={handleVoiceStart}
-              onPressOut={handleVoiceStop}
+              onPress={handleVoiceToggle}
               activeOpacity={0.85}
             >
               <Text style={styles.voiceIcon}>{isRecording ? '●' : '○'}</Text>
               <Text style={[styles.voiceBtnText, isRecording && styles.voiceBtnTextActive]}>
-                {isRecording ? 'Listening...' : 'Hold to speak'}
+                {isRecording ? 'Tap to stop' : 'Tap to speak'}
               </Text>
             </TouchableOpacity>
           </Animated.View>
           <Text style={styles.voiceHint}>
-            "I've got butter and garlic" · "I ran out of flour"
+            "I have butter and garlic" · "I ran out of flour"
           </Text>
         </View>
 

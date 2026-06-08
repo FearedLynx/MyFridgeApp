@@ -4,7 +4,8 @@ export type DietTag =
   | 'vegetarian'
   | 'vegan'
   | 'high-protein'
-  | 'quick';
+  | 'quick'
+  | 'gluten-free';
 
 export type MealTime = 'breakfast' | 'lunch' | 'dinner' | 'snack';
 
@@ -84,11 +85,11 @@ export interface FridgeItem {
 }
 
 export interface DailyPlan {
-  date: string; // ISO date string
-  breakfast?: string; // recipe id
-  lunch?: string;
-  dinner?: string;
-  snack?: string;
+  date: string;
+  breakfast: string[];
+  lunch: string[];
+  dinner: string[];
+  snack: string[];
 }
 
 export interface MatchResult {

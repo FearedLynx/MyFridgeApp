@@ -5,15 +5,14 @@ import { useApp } from '../context/AppContext';
 import { useTheme } from '../context/ThemeContext';
 import RecipeCard from '../components/RecipeCard';
 import { spacing, font } from '../utils/theme';
-
-const IMAGE_BASE_URL = '';
+import { IMAGE_BASE_URL } from '../config';
 type Props = { navigation: NativeStackNavigationProp<any> };
 
 export default function CommunityScreen({ navigation }: Props) {
-  const { allRecipes } = useApp();
+  const { dbRecipes, userRecipes } = useApp();
   const { colors } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const communityRecipes = allRecipes.filter(r => r.isCommunity);
+  const communityRecipes = [...dbRecipes, ...userRecipes].filter(r => r.isCommunity);
 
   return (
     <SafeAreaView style={styles.safe}>

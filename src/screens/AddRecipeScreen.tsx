@@ -14,7 +14,7 @@ type Props = { navigation: NativeStackNavigationProp<any> };
 const DIET_TAGS: DietTag[] = ['low-calorie', 'low-carb', 'vegetarian', 'vegan', 'high-protein', 'quick'];
 const TAG_LABELS: Record<DietTag, string> = {
   'low-calorie': 'Low Cal', 'low-carb': 'Low Carb', vegetarian: 'Vege',
-  vegan: 'Vegan', 'high-protein': 'Protein', quick: 'Quick',
+  vegan: 'Vegan', 'high-protein': 'Protein', quick: 'Quick', 'gluten-free': 'GF',
 };
 const MEAL_TIMES: MealTime[] = ['breakfast', 'lunch', 'dinner', 'snack'];
 const SECTION_TYPES: StepSectionType[] = ['cutting', 'preparing', 'cooking', 'assembling', 'baking'];

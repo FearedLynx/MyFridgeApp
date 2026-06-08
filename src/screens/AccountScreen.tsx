@@ -32,6 +32,7 @@ export default function AccountScreen() {
   const [password, setPassword] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [excludeNonDiet, setExcludeNonDiet] = useState(preferences?.excludeNonDiet ?? false);
+  const [goalInput, setGoalInput] = useState(String(preferences?.calorieGoal ?? 2000));
 
   const selectedDiet = preferences?.diet ?? 'none';
   const selectedCuisines: string[] = preferences?.cuisines ?? [];
@@ -122,6 +123,26 @@ export default function AccountScreen() {
 
         {/* ── Preferences ────────────────────────────────────── */}
         <Text style={styles.sectionTitle}>Preferences</Text>
+
+        <Text style={styles.label}>Daily Calorie Goal</Text>
+        <View style={styles.goalRow}>
+          <TextInput
+            style={styles.goalInput}
+            value={goalInput}
+            onChangeText={setGoalInput}
+            keyboardType="numeric"
+            returnKeyType="done"
+            onEndEditing={() => {
+              const n = parseInt(goalInput, 10);
+              if (!isNaN(n) && n > 0) {
+                setPreferences({ ...preferences, calorieGoal: n });
+              } else {
+                setGoalInput(String(preferences?.calorieGoal ?? 2000));
+              }
+            }}
+          />
+          <Text style={styles.goalUnit}>kcal / day</Text>
+        </View>
 
         <Text style={styles.label}>Diet</Text>
         <View style={styles.chipGrid}>
@@ -217,6 +238,9 @@ const createStyles = (colors: any) => StyleSheet.create({
   label:           { fontSize: font.sizes.xs, fontWeight: font.weights.bold, color: colors.textMuted, textTransform: 'uppercase', letterSpacing: 1, marginBottom: spacing.xs },
   labelHint:       { fontSize: font.sizes.xs, color: colors.textMuted, marginBottom: spacing.sm, marginTop: -4 },
 
+  goalRow:         { flexDirection: 'row', alignItems: 'center', gap: spacing.sm, marginBottom: spacing.md },
+  goalInput:       { backgroundColor: colors.surface, borderRadius: radius.sm, borderWidth: 1, borderColor: colors.border, paddingHorizontal: spacing.md, paddingVertical: spacing.sm, fontSize: font.sizes.lg, color: colors.text, fontWeight: '700', width: 100, textAlign: 'center' },
+  goalUnit:        { fontSize: font.sizes.md, color: colors.textMuted },
   chipGrid:        { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.xs, marginBottom: spacing.md },
   chip:            { paddingHorizontal: spacing.md, paddingVertical: spacing.xs + 2, borderRadius: radius.lg, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   chipActive:      { backgroundColor: colors.primary, borderColor: colors.primary },

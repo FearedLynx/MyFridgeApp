@@ -6,14 +6,18 @@ import { useTheme } from '../context/ThemeContext';
 import RecipeCard from '../components/RecipeCard';
 import { spacing, font } from '../utils/theme';
 
-const IMAGE_BASE_URL = '';
 type Props = { navigation: NativeStackNavigationProp<any> };
 
 export default function FavoritesScreen({ navigation }: Props) {
-  const { allRecipes, favorites } = useApp();
+  const { favorites, userRecipes, dbRecipes } = useApp();
   const { colors } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
-  const favRecipes = allRecipes.filter(r => favorites.includes(r.id));
+
+  const allRecipes = useMemo(() => [...userRecipes, ...dbRecipes], [userRecipes, dbRecipes]);
+  const favRecipes = useMemo(
+    () => allRecipes.filter(r => favorites.includes(r.id)),
+    [allRecipes, favorites],
+  );
 
   return (
     <SafeAreaView style={styles.safe}>
@@ -24,7 +28,7 @@ export default function FavoritesScreen({ navigation }: Props) {
             : `${favRecipes.length} saved recipe${favRecipes.length > 1 ? 's' : ''}`}
         </Text>
         {favRecipes.map(recipe => (
-          <RecipeCard key={recipe.id} recipe={recipe} showImage imageBaseUrl={IMAGE_BASE_URL}
+          <RecipeCard key={recipe.id} recipe={recipe}
             onPress={() => navigation.navigate('RecipeDetail', { recipeId: recipe.id })} />
         ))}
         {favRecipes.length === 0 && (

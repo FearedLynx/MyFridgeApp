@@ -18,6 +18,7 @@ import FavoritesScreen    from './src/screens/FavoritesScreen';
 import AddRecipeScreen    from './src/screens/AddRecipeScreen';
 import RecipeDetailScreen from './src/screens/RecipeDetailScreen';
 import AccountScreen      from './src/screens/AccountScreen';
+import ShoppingListScreen from './src/screens/ShoppingListScreen';
 
 const Tab   = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -106,6 +107,23 @@ function AppInner() {
           options={({ navigation }) => ({
             headerShown: true,
             headerTitle: 'New Recipe',
+            headerStyle: { backgroundColor: colors.background },
+            headerShadowVisible: false,
+            headerLeft: () => (
+              <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Text style={{ color: colors.primary, fontSize: font.sizes.md, fontWeight: font.weights.semibold }}>
+                  ← Back
+                </Text>
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Stack.Screen
+          name="ShoppingList"
+          component={ShoppingListScreen}
+          options={({ navigation }) => ({
+            headerShown: true,
+            headerTitle: 'Shopping List',
             headerStyle: { backgroundColor: colors.background },
             headerShadowVisible: false,
             headerLeft: () => (

@@ -1,0 +1,310 @@
+BREAKFAST (35)
+
+b01 | Avocado Toast | breakfast | vegetarian,low-calorie | 320 | 12 | 1 | sourdough bread (2 slices), avocado (1), lemon (½), olive oil (1 tsp), chili flakes (pinch), salt | Mash avocado with lemon, salt, pepper. Toast bread until golden. Top with avocado mixture and chili flakes.
+
+b02 | Oatmeal with Berries | breakfast | vegan,low-calorie | 280 | 10 | 1 | rolled oats (½ cup), oat milk (1 cup), mixed berries (½ cup), honey (1 tbsp), cinnamon (½ tsp) | Simmer oats in milk 5 min stirring. Top with berries, drizzle honey, dust cinnamon.
+
+b03 | Scrambled Eggs | breakfast | vegetarian,quick,high-protein | 310 | 8 | 2 | eggs (4), butter (1 tbsp), milk (2 tbsp), salt, black pepper, chives (1 tbsp) | Whisk eggs with milk, salt, pepper. Melt butter over low heat. Add eggs, fold slowly until just set. Top with chives.
+
+b04 | Classic Pancakes | breakfast | vegetarian | 380 | 20 | 2 | all-purpose flour (1 cup), egg (1), milk (¾ cup), butter (2 tbsp), baking powder (1 tsp), sugar (1 tbsp), salt | Mix dry ingredients. Whisk wet ingredients separately. Combine gently. Cook ¼ cup portions on medium heat 2 min per side. Serve with maple syrup.
+
+b05 | French Toast | breakfast | vegetarian | 420 | 15 | 2 | sourdough bread (4 slices), eggs (2), milk (¼ cup), vanilla extract (1 tsp), cinnamon (½ tsp), butter (1 tbsp), maple syrup | Whisk eggs, milk, vanilla, cinnamon. Dip bread slices. Cook in butter 3 min per side until golden. Serve with maple syrup.
+
+b06 | Greek Yogurt Parfait | breakfast,snack | vegetarian,low-calorie,high-protein | 290 | 5 | 1 | Greek yogurt (1 cup), granola (¼ cup), strawberries (½ cup), honey (1 tbsp), blueberries (¼ cup) | Layer yogurt, granola, and berries in a glass. Drizzle honey on top. Serve immediately.
+
+b07 | Veggie Omelette | breakfast | vegetarian,low-calorie,high-protein | 260 | 12 | 1 | eggs (3), bell pepper (½), mushrooms (4), spinach (handful), olive oil (1 tsp), salt, black pepper | Whisk eggs with salt and pepper. Sauté vegetables in oil 3 min. Pour eggs over, cook 2 min, fold and serve.
+
+b08 | Breakfast Burrito | breakfast | high-protein | 520 | 15 | 1 | flour tortilla (1 large), eggs (2), cheddar cheese (30g), bacon (2 strips), salsa (2 tbsp), avocado (½) | Cook bacon until crisp. Scramble eggs. Warm tortilla, layer with eggs, bacon, cheese, avocado, salsa. Roll tightly.
+
+b09 | Granola Bowl | breakfast,snack | vegan | 350 | 5 | 1 | granola (½ cup), coconut milk (½ cup), banana (1), nut butter (1 tbsp), chia seeds (1 tsp) | Pour coconut milk into bowl. Top with granola, sliced banana, nut butter, and chia seeds.
+
+b10 | Eggs Benedict | breakfast | high-protein | 550 | 20 | 2 | English muffins (2), eggs (4), back bacon (4 slices), hollandaise sauce (4 tbsp), white vinegar (1 tbsp) | Poach eggs in simmering water with vinegar 3 min. Toast muffins, warm bacon. Assemble: muffin, bacon, egg, hollandaise.
+
+b11 | Shakshuka | breakfast,lunch | vegetarian,low-calorie | 340 | 25 | 2 | eggs (4), canned tomatoes (400g), onion (1), bell pepper (1), garlic (3 cloves), cumin (1 tsp), paprika (1 tsp), olive oil | Sauté onion, pepper, garlic in oil. Add tomatoes and spices, simmer 10 min. Create wells, crack in eggs, cover and cook 8 min.
+
+b12 | Overnight Oats | breakfast | vegan,low-calorie | 310 | 5 | 1 | rolled oats (½ cup), almond milk (¾ cup), chia seeds (1 tbsp), honey (1 tbsp), vanilla (½ tsp), berries (½ cup) | Combine oats, milk, chia, honey, vanilla in jar. Refrigerate overnight. Top with berries before serving.
+
+b13 | Banana Pancakes | breakfast | vegetarian,gluten-free | 280 | 10 | 1 | banana (1 ripe), eggs (2), almond butter (1 tbsp), cinnamon (¼ tsp), coconut oil (1 tsp) | Mash banana thoroughly. Mix in eggs, almond butter, cinnamon. Cook small rounds on oiled pan 2 min per side.
+
+b14 | Smoked Salmon Bagel | breakfast,lunch | high-protein | 440 | 5 | 1 | bagel (1), smoked salmon (80g), cream cheese (2 tbsp), capers (1 tbsp), red onion (2 slices), lemon (½), dill | Toast bagel. Spread cream cheese. Layer salmon, red onion, capers. Squeeze lemon, top with dill.
+
+b15 | Mushroom Omelette | breakfast | vegetarian,low-carb,high-protein | 270 | 12 | 1 | eggs (3), mushrooms (100g), thyme (½ tsp), butter (1 tbsp), gruyère (20g), salt, black pepper | Sauté sliced mushrooms with thyme in butter until golden. Whisk eggs. Cook eggs in butter, add mushrooms and cheese, fold.
+
+b16 | Chia Pudding | breakfast,snack | vegan,gluten-free,low-calorie | 250 | 5 | 1 | chia seeds (3 tbsp), coconut milk (1 cup), honey (1 tbsp), vanilla (½ tsp), mango (½), kiwi (1) | Mix chia, milk, honey, vanilla. Refrigerate 4h or overnight. Top with diced mango and kiwi.
+
+b17 | Huevos Rancheros | breakfast | vegetarian | 420 | 20 | 2 | corn tortillas (4), eggs (4), black beans (200g), tomato salsa (100g), avocado (1), coriander, feta (30g) | Warm tortillas. Fry beans with salsa. Fry eggs sunny side. Assemble: tortilla, beans, egg. Top with avocado, feta, coriander.
+
+b18 | Apple Cinnamon Oatmeal | breakfast | vegan,low-calorie | 290 | 12 | 1 | rolled oats (½ cup), apple (1), cinnamon (1 tsp), maple syrup (1 tbsp), oat milk (1 cup), walnuts (1 tbsp) | Simmer oats in milk. Dice apple, sauté with cinnamon 3 min. Top oats with apple, drizzle maple syrup, add walnuts.
+
+b19 | Breakfast Tacos | breakfast | high-protein,quick | 390 | 12 | 2 | small corn tortillas (4), eggs (3), chorizo (60g), cheddar (30g), avocado (½), salsa verde (2 tbsp), lime | Crumble and cook chorizo. Scramble eggs together with chorizo. Warm tortillas. Fill with egg mixture, cheese, avocado. Serve with salsa and lime.
+
+b20 | Ricotta Toast with Honey | breakfast,snack | vegetarian,quick | 310 | 5 | 1 | sourdough bread (2 slices), ricotta (4 tbsp), honey (1 tbsp), walnuts (1 tbsp), figs (2), lemon zest | Toast bread. Spread ricotta generously. Top with sliced figs, walnuts, drizzle honey, add lemon zest.
+
+b21 | Smoothie Bowl | breakfast,snack | vegan,low-calorie | 320 | 5 | 1 | frozen acai (100g), frozen banana (1), almond milk (¼ cup), granola (¼ cup), coconut flakes (1 tbsp), fresh berries (½ cup) | Blend acai, banana, almond milk until thick. Pour into bowl. Top with granola, coconut flakes, berries.
+
+b22 | Baked Eggs in Tomatoes | breakfast | vegetarian,low-calorie | 280 | 25 | 2 | eggs (4), canned tomatoes (400g), garlic (2 cloves), olive oil (1 tbsp), feta (40g), basil, sourdough bread (2 slices) | Simmer tomatoes with garlic in oil 10 min. Create wells, add eggs. Bake 180°C 10 min. Top with feta and basil. Serve with bread.
+
+b23 | Ham Egg Cheese Sandwich | breakfast | high-protein,quick | 450 | 8 | 1 | English muffin (1), egg (1), ham slice (2), cheddar (1 slice), butter (1 tsp), dijon mustard (½ tsp) | Fry egg in butter, salt and pepper. Toast muffin. Warm ham. Assemble with mustard, ham, egg, cheese.
+
+b24 | Savory Oatmeal | breakfast | vegetarian | 310 | 10 | 1 | rolled oats (½ cup), vegetable stock (1 cup), poached egg (1), parmesan (2 tbsp), chives (1 tbsp), olive oil (1 tsp), salt | Cook oats in stock. Top with poached egg, parmesan, chives. Drizzle olive oil.
+
+b25 | Cottage Cheese Bowl | breakfast,snack | high-protein,low-calorie,gluten-free | 260 | 5 | 1 | cottage cheese (1 cup), cherry tomatoes (½ cup), cucumber (½), olive oil (1 tsp), za'atar (1 tsp), sourdough croutons (¼ cup) | Spoon cottage cheese into bowl. Top with halved tomatoes, sliced cucumber. Drizzle oil, dust za'atar.
+
+b26 | Protein Smoothie | breakfast,snack | vegan,high-protein | 350 | 5 | 1 | banana (1 frozen), almond milk (1 cup), peanut butter (2 tbsp), protein powder (1 scoop), cocoa powder (1 tbsp), honey (1 tbsp) | Blend all ingredients until smooth. Pour into glass and serve immediately.
+
+b27 | Waffles with Berries | breakfast | vegetarian | 410 | 20 | 2 | all-purpose flour (1 cup), eggs (2), milk (¾ cup), butter (3 tbsp), baking powder (2 tsp), sugar (2 tbsp), mixed berries (1 cup) | Separate eggs, whisk whites to stiff peaks. Mix yolks with milk, butter, dry ingredients. Fold whites in. Cook in waffle iron. Top with berries.
+
+b28 | Bircher Muesli | breakfast | vegetarian | 330 | 5 | 1 | rolled oats (½ cup), apple (½ grated), plain yogurt (½ cup), milk (¼ cup), lemon juice (1 tbsp), honey (1 tbsp), almonds (1 tbsp) | Mix oats, grated apple, yogurt, milk, lemon, honey. Refrigerate overnight. Top with almonds before serving.
+
+b29 | Poached Eggs on Spinach | breakfast | vegetarian,low-calorie,high-protein | 240 | 12 | 1 | eggs (2), baby spinach (100g), garlic (1 clove), olive oil (1 tsp), white vinegar (1 tbsp), salt, chili flakes | Sauté spinach with garlic in oil until wilted. Poach eggs in simmering water with vinegar 3 min. Serve eggs on spinach, chili flakes on top.
+
+b30 | Blueberry Smoothie Bowl | breakfast,snack | vegan,low-calorie | 300 | 5 | 1 | frozen blueberries (1 cup), frozen banana (½), oat milk (¼ cup), granola (3 tbsp), honey (1 tsp), hemp seeds (1 tsp) | Blend blueberries, banana, oat milk thick. Pour into bowl. Top with granola, hemp seeds, drizzle honey.
+
+b31 | Sweet Potato Toast | breakfast | vegan,gluten-free,low-calorie | 290 | 20 | 1 | sweet potato (1 large), almond butter (2 tbsp), banana (½ sliced), hemp seeds (1 tsp), cinnamon (¼ tsp) | Slice sweet potato lengthwise ½ inch thick. Toast in toaster twice until cooked. Top with almond butter, banana, seeds, cinnamon.
+
+b32 | Turkey Breakfast Hash | breakfast | high-protein,low-carb | 380 | 20 | 2 | ground turkey (200g), sweet potato (1 diced), bell pepper (1), onion (1), garlic (2 cloves), olive oil, paprika (1 tsp), eggs (2) | Cook turkey, drain. Sauté potato, pepper, onion in oil until tender 10 min. Add garlic, paprika, turkey. Make wells, cook eggs in pan.
+
+b33 | Matcha Overnight Oats | breakfast | vegan | 310 | 5 | 1 | rolled oats (½ cup), matcha powder (1 tsp), oat milk (¾ cup), honey (1 tbsp), vanilla (½ tsp), banana (½), pistachios (1 tbsp) | Mix oats, matcha, milk, honey, vanilla. Refrigerate overnight. Top with banana and pistachios.
+
+b34 | Egg White Frittata | breakfast | high-protein,low-calorie,low-carb | 220 | 20 | 2 | egg whites (6), cherry tomatoes (½ cup), spinach (80g), feta (30g), olive oil (1 tsp), basil, salt, black pepper | Whisk egg whites with salt. Sauté spinach and tomatoes in oiled oven-safe pan. Pour whites over. Bake 180°C 12 min until set. Top with feta and basil.
+
+b35 | Keto Breakfast Bowl | breakfast | high-protein,low-carb,gluten-free | 450 | 15 | 1 | eggs (3), bacon (3 strips), avocado (½), cherry tomatoes (6), cheddar (30g), spinach (handful), olive oil (1 tsp) | Fry bacon crisp. Scramble eggs in bacon fat. Plate on bed of spinach. Add avocado, tomatoes, cheese.
+
+
+LUNCH (40)
+
+l01 | Caesar Salad | lunch | vegetarian,low-calorie | 320 | 10 | 2 | romaine lettuce (1 head), parmesan (40g), croutons (½ cup), Caesar dressing (3 tbsp), lemon (½), black pepper | Tear lettuce into bowl. Toss with dressing, parmesan, croutons. Squeeze lemon, crack black pepper.
+
+l02 | BLT Sandwich | lunch | quick | 410 | 10 | 1 | sourdough bread (2 slices), bacon (3 strips), tomato (1), lettuce (2 leaves), mayonnaise (1 tbsp), salt, black pepper | Cook bacon crisp. Toast bread. Spread mayo. Layer lettuce, tomato, bacon. Season, close sandwich.
+
+l03 | Chicken Caesar Wrap | lunch | high-protein | 480 | 15 | 1 | flour tortilla (1 large), chicken breast (1 cooked), romaine (2 leaves), parmesan (20g), Caesar dressing (2 tbsp), croutons (¼ cup) | Grill or slice cooked chicken. Warm tortilla. Layer lettuce, chicken, parmesan, croutons, dressing. Roll tightly.
+
+l04 | Tomato Soup | lunch | vegan,low-calorie | 220 | 25 | 2 | canned tomatoes (800g), onion (1), garlic (3 cloves), vegetable stock (400ml), olive oil (1 tbsp), basil (handful), sugar (1 tsp) | Sauté onion and garlic. Add tomatoes, stock, sugar. Simmer 15 min. Blend smooth. Top with basil.
+
+l05 | Greek Salad | lunch | vegetarian,gluten-free,low-calorie | 290 | 10 | 2 | cucumber (1), cherry tomatoes (1 cup), kalamata olives (½ cup), red onion (½), feta (100g), olive oil (2 tbsp), oregano (1 tsp) | Dice cucumber, halve tomatoes. Combine all vegetables. Add olives and feta. Dress with oil and oregano.
+
+l06 | Tuna Sandwich | lunch | high-protein,quick | 390 | 5 | 1 | canned tuna (1 tin), sourdough bread (2 slices), mayonnaise (1 tbsp), celery (1 stick), lemon juice (1 tsp), lettuce, red onion (2 slices) | Drain tuna, mix with mayo, celery, lemon, salt, pepper. Spread on bread with lettuce and onion.
+
+l07 | Quinoa Buddha Bowl | lunch | vegan,gluten-free,high-protein | 430 | 20 | 2 | quinoa (½ cup dry), chickpeas (200g), cucumber (1), avocado (1), cherry tomatoes (½ cup), tahini (2 tbsp), lemon (1) | Cook quinoa. Roast chickpeas with oil and paprika 20 min. Assemble bowls. Dress with tahini-lemon sauce.
+
+l08 | Lentil Soup | lunch | vegan,high-protein | 310 | 30 | 4 | red lentils (200g), carrot (2), onion (1), garlic (3 cloves), cumin (1 tsp), turmeric (½ tsp), vegetable stock (1L), olive oil | Sauté onion, carrot, garlic. Add lentils, spices, stock. Simmer 20 min until lentils are soft. Season and serve.
+
+l09 | Chicken Noodle Soup | lunch | high-protein | 340 | 30 | 4 | chicken breast (2), egg noodles (150g), carrot (2), celery (3 sticks), onion (1), chicken stock (1.5L), thyme (2 sprigs), parsley | Simmer chicken in stock with veg and thyme 20 min. Remove chicken, shred. Cook noodles in broth. Return chicken. Top with parsley.
+
+l10 | Falafel Pita | lunch | vegan | 420 | 15 | 2 | pita bread (2), falafel (8), hummus (4 tbsp), cucumber (½), tomato (1), lettuce, tahini (2 tbsp), lemon juice | Warm falafel and pita. Spread hummus inside pita. Fill with falafel, cucumber, tomato, lettuce. Drizzle tahini and lemon.
+
+l11 | Turkey Club Sandwich | lunch | high-protein | 480 | 10 | 1 | sourdough bread (3 slices), turkey breast (80g), bacon (2 strips), tomato (1), lettuce (2 leaves), avocado (½), mayo (1 tbsp) | Toast all bread slices. Cook bacon. Layer: bread, turkey, lettuce, tomato; second bread; bacon, avocado, mayo; top bread.
+
+l12 | Minestrone Soup | lunch | vegan | 290 | 35 | 4 | cannellini beans (200g), diced tomatoes (400g), zucchini (1), carrot (1), celery (2), pasta (100g), vegetable stock (1L), basil | Sauté vegetables in oil. Add stock, tomatoes, beans. Simmer 15 min. Add pasta, cook 10 min. Top with basil.
+
+l13 | Shrimp Tacos | lunch,dinner | quick | 390 | 15 | 2 | shrimp (300g), corn tortillas (6), lime (1), avocado (1), red cabbage (1 cup shredded), sour cream (2 tbsp), chipotle sauce (1 tbsp), coriander | Season and cook shrimp 2 min per side. Warm tortillas. Fill with shrimp, cabbage, avocado, sour cream, chipotle. Lime and coriander on top.
+
+l14 | French Onion Soup | lunch | vegetarian | 380 | 50 | 4 | onions (4 large), beef stock (1L), gruyère (100g), sourdough bread (4 slices), butter (2 tbsp), thyme (2 sprigs), white wine (100ml) | Caramelize onions in butter 30 min. Add wine, reduce. Add stock and thyme, simmer 15 min. Ladle into bowls, top with bread and gruyère. Broil until melted.
+
+l15 | Hummus Veggie Wrap | lunch | vegan,low-calorie | 340 | 8 | 1 | flour tortilla (1), hummus (3 tbsp), cucumber (½), roasted red pepper (2), baby spinach (handful), avocado (½), lemon juice | Spread hummus on tortilla. Layer spinach, cucumber, roasted pepper, avocado. Squeeze lemon. Roll tightly.
+
+l16 | Cobb Salad | lunch | gluten-free,high-protein | 490 | 15 | 2 | romaine lettuce (1 head), grilled chicken (1 breast), bacon (4 strips), eggs (2 hard-boiled), avocado (1), blue cheese (40g), cherry tomatoes (½ cup) | Arrange lettuce in rows. Top with chicken, bacon, sliced eggs, avocado, tomatoes. Crumble blue cheese. Dress with vinaigrette.
+
+l17 | Grilled Cheese Sandwich | lunch | vegetarian,quick | 450 | 10 | 1 | sourdough bread (2 slices), cheddar (60g), gruyère (30g), butter (1 tbsp), dijon mustard (1 tsp) | Spread mustard on bread. Layer cheeses. Butter outside of bread. Grill on medium heat 3 min per side until golden and melted.
+
+l18 | Thai Peanut Noodles | lunch | vegan | 430 | 15 | 2 | rice noodles (200g), peanut butter (3 tbsp), soy sauce (2 tbsp), lime juice (1 tbsp), sesame oil (1 tsp), cucumber (1), carrot (1), coriander | Cook noodles. Whisk peanut butter, soy, lime, sesame into sauce with warm water. Toss noodles with sauce, veg, coriander.
+
+l19 | Pesto Pasta Salad | lunch | vegetarian | 410 | 15 | 4 | fusilli pasta (200g), basil pesto (4 tbsp), cherry tomatoes (1 cup), mozzarella (150g), pine nuts (2 tbsp), basil leaves, lemon | Cook pasta, cool under cold water. Toss with pesto, tomatoes, mozzarella. Top with pine nuts and basil.
+
+l20 | Chicken Tortilla Soup | lunch,dinner | high-protein | 350 | 30 | 4 | chicken thighs (2), canned tomatoes (400g), black beans (200g), corn (200g), chicken stock (800ml), jalapeño (1), cumin (1 tsp), tortilla chips | Simmer chicken in stock with tomatoes, beans, corn, jalapeño, cumin 20 min. Shred chicken. Serve with tortilla chips.
+
+l21 | Mediterranean Grain Bowl | lunch | vegetarian | 430 | 20 | 2 | farro (½ cup dry), cucumber (1), cherry tomatoes (½ cup), kalamata olives (¼ cup), feta (60g), hummus (2 tbsp), lemon-herb dressing (2 tbsp) | Cook farro per package. Assemble bowls with farro, chopped vegetables, olives, feta. Add hummus on side. Dress with lemon.
+
+l22 | Egg Salad Sandwich | lunch | vegetarian,quick | 400 | 10 | 2 | eggs (4 hard-boiled), mayonnaise (2 tbsp), dijon mustard (1 tsp), celery (1 stick), chives (1 tbsp), sourdough bread (4 slices), lettuce | Chop hard-boiled eggs. Mix with mayo, mustard, celery, chives, salt, pepper. Spread on bread with lettuce.
+
+l23 | Butternut Squash Soup | lunch | vegan,gluten-free | 260 | 35 | 4 | butternut squash (1 large), onion (1), garlic (3 cloves), vegetable stock (800ml), coconut milk (200ml), ginger (1 tsp), nutmeg (¼ tsp) | Roast cubed squash and garlic 25 min. Sauté onion. Blend all with stock, coconut milk, ginger. Season with nutmeg.
+
+l24 | Soba Noodle Salad | lunch | vegan | 380 | 15 | 2 | soba noodles (200g), edamame (1 cup), carrot (1 julienned), cucumber (1), spring onion (3), sesame dressing (3 tbsp), nori (2 sheets) | Cook soba noodles, rinse cold. Toss with edamame, carrot, cucumber, spring onion. Dress with sesame dressing. Top with shredded nori.
+
+l25 | Steak Salad | lunch | high-protein,low-carb,gluten-free | 490 | 20 | 2 | sirloin steak (300g), mixed greens (4 cups), cherry tomatoes (½ cup), red onion (¼), parmesan (30g), balsamic dressing (2 tbsp), olive oil | Season and sear steak 3 min per side for medium. Rest, slice thin. Toss greens with tomatoes, onion, dressing. Top with steak and parmesan.
+
+l26 | Spiced Lentil Bowl | lunch | vegan,high-protein | 380 | 25 | 2 | green lentils (200g), sweet potato (1), spinach (80g), garlic (2 cloves), cumin (1 tsp), coriander (1 tsp), olive oil (1 tbsp), lemon | Cook lentils. Roast cubed sweet potato. Sauté garlic and spices, add spinach until wilted. Combine with lemon juice.
+
+l27 | Waldorf Salad | lunch | vegetarian,quick,low-calorie | 310 | 8 | 2 | apple (2), celery (3 sticks), walnuts (½ cup), grapes (½ cup), mayonnaise (2 tbsp), Greek yogurt (2 tbsp), lemon juice, lettuce | Dice apple and celery. Halve grapes. Mix mayo and yogurt dressing. Combine with apple, celery, grapes, walnuts. Serve on lettuce.
+
+l28 | Salmon Quinoa Bowl | lunch | high-protein,gluten-free | 510 | 20 | 2 | salmon fillet (2x150g), quinoa (½ cup dry), avocado (1), edamame (½ cup), cucumber (1), miso dressing (2 tbsp), sesame seeds | Cook quinoa. Pan-fry salmon 4 min per side. Assemble bowls with quinoa, avocado, edamame, cucumber. Top with salmon. Dress with miso, sesame seeds.
+
+l29 | Corn Chowder | lunch | vegetarian | 360 | 30 | 4 | corn kernels (400g), potato (2 diced), onion (1), garlic (2 cloves), milk (400ml), vegetable stock (400ml), bacon (optional, 2 strips), cheddar (40g) | Sauté onion, garlic, optional bacon. Add potato, corn, stock. Simmer 15 min. Add milk, simmer 5 min. Top with cheese.
+
+l30 | Kale Salad | lunch | vegan,low-calorie,gluten-free | 280 | 10 | 2 | curly kale (4 cups), avocado (1), apple (1), pumpkin seeds (2 tbsp), cranberries (2 tbsp), tahini dressing (3 tbsp) | Massage kale with dressing until softened. Add sliced apple, avocado chunks, seeds, cranberries. Toss gently.
+
+l31 | Vietnamese Spring Rolls | lunch | vegan,low-calorie | 250 | 20 | 2 | rice paper (8 sheets), vermicelli noodles (100g), carrot (1 julienned), cucumber (½), avocado (1), mint (handful), sweet chili sauce | Soak rice paper one at a time. Fill with noodles, carrot, cucumber, avocado, mint. Roll tightly. Serve with sweet chili.
+
+l32 | Tabbouleh | lunch | vegan,low-calorie | 260 | 15 | 4 | bulgur wheat (½ cup dry), flat-leaf parsley (2 bunches), mint (½ bunch), tomatoes (3), cucumber (1), olive oil (3 tbsp), lemon juice (3 tbsp) | Cook bulgur, cool. Finely chop parsley and mint. Dice tomatoes and cucumber. Combine all, dress with oil and lemon. Season well.
+
+l33 | Asian Slaw Salad | lunch | vegan,low-calorie | 220 | 10 | 2 | red cabbage (2 cups shredded), carrot (1 julienned), edamame (½ cup), spring onion (3), sesame oil (1 tbsp), rice vinegar (1 tbsp), soy sauce (1 tbsp), sesame seeds | Combine cabbage, carrot, edamame, spring onion. Whisk dressing. Toss. Top with sesame seeds.
+
+l34 | Pork Bánh Mì | lunch | quick | 460 | 15 | 1 | baguette (1 small), pork belly (100g sliced), pickled daikon (2 tbsp), carrot (pickled, 2 tbsp), cucumber (½), jalapeño (½), coriander, mayo (1 tbsp), sriracha | Warm pork belly in pan. Slice baguette, spread mayo and sriracha. Fill with pork, pickled veg, cucumber, jalapeño, coriander.
+
+l35 | Cold Sesame Noodles | lunch | vegan | 400 | 10 | 2 | ramen noodles (200g), tahini (2 tbsp), soy sauce (2 tbsp), sesame oil (1 tbsp), rice vinegar (1 tbsp), garlic (1 clove), cucumber (1), spring onion | Cook noodles, cool. Whisk tahini, soy, sesame oil, vinegar, garlic with water. Toss noodles. Top with cucumber and spring onion.
+
+l36 | Roasted Veggie Wrap | lunch | vegan,low-calorie | 360 | 25 | 1 | flour tortilla (1 large), zucchini (1), bell pepper (1), red onion (½), hummus (2 tbsp), baby spinach (handful), balsamic glaze (1 tbsp) | Roast sliced vegetables with oil at 200°C 20 min. Spread hummus on tortilla. Add spinach, vegetables, drizzle balsamic. Roll.
+
+l37 | Caprese Sandwich | lunch | vegetarian,quick | 390 | 5 | 1 | ciabatta (1 roll), fresh mozzarella (80g), tomato (1 large), basil (handful), olive oil (1 tbsp), balsamic vinegar (1 tsp), salt | Slice ciabatta, drizzle oil. Layer mozzarella, tomato, basil. Drizzle balsamic. Season. Close sandwich.
+
+l38 | Beef Stir-Fry Bowl | lunch,dinner | high-protein,quick | 480 | 15 | 2 | beef strips (300g), jasmine rice (½ cup dry), broccoli (1 head), soy sauce (2 tbsp), oyster sauce (1 tbsp), ginger (1 tsp), garlic (2 cloves), sesame oil | Cook rice. Stir-fry beef in hot wok 3 min. Add garlic, ginger, broccoli. Sauce with soy and oyster. Serve over rice.
+
+l39 | Chickpea Salad Wrap | lunch | vegan,high-protein | 390 | 10 | 1 | flour tortilla (1), chickpeas (200g), cucumber (½), cherry tomatoes (½ cup), tahini (2 tbsp), lemon (1), cumin (½ tsp), coriander | Drain chickpeas, toss with lemon, cumin, salt. Mix tahini with water and lemon. Fill tortilla with chickpeas, veg, tahini sauce, coriander.
+
+l40 | Club Sandwich | lunch | high-protein | 530 | 12 | 1 | sourdough bread (3 slices toasted), turkey (60g), bacon (2 strips), tomato (1), lettuce (2 leaves), egg (1 fried), mayo (1 tbsp), mustard (1 tsp) | Toast bread. Cook bacon. Fry egg. Build layers: mayo/mustard bread, turkey, lettuce; middle bread; bacon, tomato, egg, top bread.
+
+
+DINNER (55)
+
+d01 | Spaghetti Bolognese | dinner | high-protein | 580 | 45 | 4 | spaghetti (400g), beef mince (500g), canned tomatoes (400g), onion (1), carrot (1), celery (1), garlic (3 cloves), red wine (100ml), parmesan | Sauté veg in oil. Brown beef. Add wine, reduce. Add tomatoes, simmer 25 min. Cook pasta. Serve with parmesan.
+
+d02 | Roast Chicken with Veg | dinner | high-protein,gluten-free | 520 | 80 | 4 | whole chicken (1.5kg), potatoes (4), carrots (3), onion (2), garlic (1 head), rosemary (3 sprigs), olive oil (3 tbsp), lemon (1) | Rub chicken with oil, lemon, rosemary, salt, pepper. Surround with vegetables. Roast 200°C 70 min until juices run clear.
+
+d03 | Grilled Salmon with Lemon | dinner | high-protein,gluten-free,low-carb | 420 | 15 | 2 | salmon fillets (2x180g), lemon (1), garlic (2 cloves), olive oil (2 tbsp), dill (handful), asparagus (200g), salt, black pepper | Season salmon with garlic, lemon, oil, salt. Grill 4 min per side. Grill asparagus alongside. Serve with fresh dill.
+
+d04 | Chicken Tikka Masala | dinner | high-protein | 540 | 35 | 4 | chicken thighs (600g), canned tomatoes (400g), heavy cream (150ml), onion (1), tikka paste (3 tbsp), garlic (3 cloves), ginger (1 tsp), basmati rice (to serve) | Marinate chicken in tikka paste. Sear until charred. Sauté onion, garlic, ginger. Add tomatoes, simmer 15 min. Add cream, simmer 5 min. Serve with rice.
+
+d05 | Pasta Carbonara | dinner | high-protein | 620 | 20 | 2 | spaghetti (200g), guanciale (100g), eggs (3), parmesan (80g), black pepper (generous), garlic (1 clove) | Cook pasta. Fry guanciale and garlic until crispy. Whisk eggs with parmesan, pepper. Remove pan from heat, combine pasta, guanciale, egg mixture quickly. Stir vigorously.
+
+d06 | Vegetable Curry | dinner | vegan,gluten-free | 350 | 30 | 4 | chickpeas (400g), cauliflower (1), spinach (100g), canned tomatoes (400g), coconut milk (400ml), curry paste (2 tbsp), onion (1), basmati rice (to serve) | Sauté onion and curry paste. Add cauliflower, chickpeas, tomatoes. Simmer 15 min. Add coconut milk, spinach. Serve with rice.
+
+d07 | Chicken Parmesan | dinner | high-protein | 580 | 30 | 2 | chicken breasts (2), breadcrumbs (½ cup), parmesan (60g), marinara sauce (200ml), mozzarella (100g), egg (1), olive oil, basil | Coat chicken in beaten egg then breadcrumb-parmesan mix. Fry 5 min per side. Transfer to baking dish, top with marinara and mozzarella. Bake 180°C 15 min.
+
+d08 | Beef Stew | dinner | high-protein | 490 | 120 | 4 | beef chuck (800g), potatoes (3), carrot (3), onion (2), beef stock (500ml), red wine (200ml), tomato paste (2 tbsp), thyme, garlic | Brown beef in batches. Sauté veg. Add wine, reduce. Add stock, tomato paste, herbs, beef. Braise 90 min until tender.
+
+d09 | Mushroom Risotto | dinner | vegetarian | 450 | 35 | 2 | arborio rice (200g), mixed mushrooms (300g), onion (1), garlic (2 cloves), white wine (100ml), parmesan (60g), butter (2 tbsp), vegetable stock (1L), thyme | Sauté mushrooms, set aside. Fry onion, garlic. Add rice, toast. Add wine, stir. Add stock ladle by ladle stirring constantly 20 min. Finish with butter, parmesan.
+
+d10 | Thai Green Curry | dinner | gluten-free | 480 | 25 | 4 | chicken thighs (600g), coconut milk (400ml), green curry paste (3 tbsp), eggplant (1), zucchini (1), fish sauce (1 tbsp), basil (handful), jasmine rice | Cook curry paste in oil 1 min. Add chicken, sear. Pour in coconut milk, add veg, fish sauce. Simmer 15 min. Top with basil.
+
+d11 | Eggplant Parmesan | dinner | vegetarian | 430 | 45 | 4 | eggplant (2 large), marinara sauce (400ml), mozzarella (200g), parmesan (80g), breadcrumbs (½ cup), eggs (2), olive oil, basil | Slice eggplant, salt 10 min, pat dry. Coat in egg and breadcrumbs. Fry until golden. Layer with marinara and cheeses. Bake 180°C 20 min.
+
+d12 | Butter Chicken | dinner | high-protein,gluten-free | 520 | 35 | 4 | chicken breasts (600g), butter (3 tbsp), canned tomatoes (400g), heavy cream (150ml), ginger (1 tbsp), garlic (4 cloves), garam masala (2 tsp), cardamom (½ tsp), naan (to serve) | Marinate chicken in yogurt and spices. Sear in butter. Blend tomatoes, ginger, garlic, fry sauce. Add chicken, cream. Simmer 15 min.
+
+d13 | Grilled Steak Chimichurri | dinner | high-protein,low-carb,gluten-free | 510 | 20 | 2 | ribeye steak (2x250g), flat parsley (1 cup), garlic (4 cloves), olive oil (4 tbsp), red wine vinegar (2 tbsp), chili flakes, oregano (1 tsp) | Make chimichurri: blend parsley, garlic, oil, vinegar, chili, oregano. Rest steak at room temp. Grill 3 min per side for medium-rare. Rest, serve with chimichurri.
+
+d14 | Korean BBQ Beef (Bulgogi) | dinner | high-protein | 490 | 20 | 4 | beef sirloin (600g thinly sliced), soy sauce (3 tbsp), sesame oil (2 tbsp), brown sugar (2 tbsp), garlic (4 cloves), ginger (1 tbsp), pear (½ grated), jasmine rice | Marinate beef 1h in soy, sesame, sugar, garlic, ginger, pear. Grill on high heat 2-3 min per side. Serve with rice and lettuce wraps.
+
+d15 | Miso Glazed Salmon | dinner | high-protein,low-carb | 430 | 20 | 2 | salmon fillets (2x180g), white miso (2 tbsp), mirin (1 tbsp), sake (1 tbsp), sugar (1 tsp), bok choy (2), sesame seeds, spring onion | Mix miso, mirin, sake, sugar. Marinate salmon 30 min. Broil 10 min until caramelized. Steam bok choy. Top with sesame seeds and spring onion.
+
+d16 | Pasta Puttanesca | dinner | vegan | 430 | 20 | 2 | spaghetti (200g), canned tomatoes (400g), kalamata olives (100g), capers (2 tbsp), anchovy fillets (4), garlic (3 cloves), chili flakes, olive oil | Fry anchovies, garlic, chili in oil. Add tomatoes, olives, capers. Simmer 15 min. Toss with cooked pasta.
+
+d17 | Beef Stroganoff | dinner | high-protein | 560 | 25 | 4 | beef strips (500g), mushrooms (300g), onion (1), sour cream (150ml), beef stock (200ml), dijon mustard (1 tsp), butter (2 tbsp), egg noodles (300g) | Cook noodles. Sear beef strips. Sauté mushrooms and onion in butter. Add stock, mustard, simmer 5 min. Stir in sour cream. Serve over noodles.
+
+d18 | Shrimp Fajitas | dinner | quick | 450 | 15 | 2 | shrimp (400g), flour tortillas (6), bell peppers (2), onion (1), fajita seasoning (1 tbsp), avocado (1), sour cream (2 tbsp), lime | Sauté peppers and onion until soft. Add shrimp and seasoning, cook 3 min. Warm tortillas. Serve with avocado and sour cream.
+
+d19 | Chicken Shawarma | dinner | high-protein | 500 | 30 | 4 | chicken thighs (600g), shawarma spice blend (2 tbsp), olive oil (2 tbsp), pita bread (4), tahini sauce (4 tbsp), tomato (2), cucumber (1), red onion | Marinate chicken in spices and oil. Grill or roast until cooked. Slice thin. Serve in pita with tahini, tomato, cucumber, onion.
+
+d20 | Baked Cod with Vegetables | dinner | high-protein,low-calorie,gluten-free | 330 | 25 | 2 | cod fillets (2x180g), cherry tomatoes (1 cup), zucchini (1), lemon (1), garlic (2 cloves), olive oil (2 tbsp), capers (1 tbsp), parsley | Arrange veg in baking dish. Place cod on top. Drizzle with oil and lemon. Add capers, garlic. Bake 200°C 20 min. Top with parsley.
+
+d21 | Vegetable Lasagna | dinner | vegetarian | 480 | 60 | 6 | lasagna sheets (12), ricotta (400g), spinach (200g), zucchini (2), marinara sauce (600ml), mozzarella (200g), parmesan (80g), egg (1) | Mix ricotta, spinach, egg. Layer: marinara, lasagna, ricotta mix, veg, repeat. Top with mozzarella, parmesan. Bake 180°C 40 min.
+
+d22 | Pork Carnitas | dinner | high-protein | 510 | 90 | 6 | pork shoulder (1.5kg), orange juice (½ cup), lime juice (2 tbsp), cumin (1 tsp), garlic (4 cloves), oregano (1 tsp), salt, tortillas (to serve) | Season pork. Braise with juices, garlic, spices 60-90 min until tender. Shred. Broil 5 min to crisp edges. Serve in tortillas.
+
+d23 | Prawn Linguine | dinner | high-protein,quick | 490 | 20 | 2 | linguine (200g), prawns (300g), garlic (3 cloves), cherry tomatoes (1 cup), white wine (100ml), olive oil (2 tbsp), parsley, chili flakes | Cook pasta. Sauté garlic and chili in oil. Add prawns, cook 2 min. Add tomatoes, wine, reduce. Toss with pasta and parsley.
+
+d24 | Chicken Marsala | dinner | high-protein | 490 | 25 | 2 | chicken breasts (2), marsala wine (150ml), mushrooms (200g), shallots (2), chicken stock (100ml), butter (2 tbsp), flour (2 tbsp), thyme | Dredge chicken in flour. Pan-fry 5 min per side. Set aside. Sauté shallots, mushrooms. Add marsala, stock, thyme. Simmer 5 min. Return chicken to sauce.
+
+d25 | BBQ Baby Back Ribs | dinner | high-protein | 650 | 180 | 4 | baby back ribs (1.5kg), BBQ sauce (200ml), brown sugar (2 tbsp), paprika (1 tbsp), garlic powder (1 tsp), cumin (1 tsp), salt, black pepper | Rub ribs with spice mix. Wrap in foil. Bake 150°C 2h until tender. Brush with BBQ sauce. Broil 10 min until caramelized.
+
+d26 | Spaghetti Aglio e Olio | dinner | vegan,quick | 420 | 15 | 2 | spaghetti (200g), garlic (6 cloves), olive oil (4 tbsp), chili flakes (1 tsp), parsley (handful), parmesan (to serve), salt | Cook pasta. Gently warm garlic and chili in oil until golden. Add pasta, reserved pasta water, parsley. Toss. Top with parmesan.
+
+d27 | Honey Garlic Salmon | dinner | high-protein,gluten-free,quick | 430 | 15 | 2 | salmon fillets (2x180g), honey (2 tbsp), soy sauce (2 tbsp), garlic (3 cloves), olive oil (1 tbsp), lemon (½), sesame seeds, spring onion | Mix honey, soy, minced garlic. Pan-sear salmon 4 min per side, basting with glaze. Rest 2 min. Top with sesame and spring onion.
+
+d28 | Tandoori Chicken | dinner | high-protein,gluten-free | 420 | 60 | 4 | chicken thighs (600g), yogurt (150ml), tandoori spice (2 tbsp), garlic (3 cloves), ginger (1 tbsp), lemon juice (2 tbsp), naan (to serve) | Score chicken. Marinate in yogurt, spices, garlic, ginger, lemon 4h minimum. Grill or bake 200°C 35 min. Serve with naan and mint chutney.
+
+d29 | Veggie Pad Thai | dinner | vegan | 440 | 20 | 2 | rice noodles (200g), tofu (200g), bean sprouts (1 cup), egg (2), spring onion (4), peanuts (3 tbsp), tamarind paste (2 tbsp), fish sauce (1 tbsp), lime | Soak noodles. Pan-fry tofu until golden. Push aside, scramble eggs. Add noodles, tamarind, fish sauce. Toss with sprouts, spring onion. Top with peanuts and lime.
+
+d30 | Chicken Piccata | dinner | high-protein | 420 | 20 | 2 | chicken breasts (2), flour (3 tbsp), butter (3 tbsp), lemon juice (3 tbsp), capers (2 tbsp), chicken stock (100ml), white wine (100ml), parsley | Pound chicken thin, dredge in flour. Sear in butter 3 min per side. Set aside. Deglaze with wine, add stock, lemon, capers. Simmer 5 min. Pour over chicken.
+
+d31 | Stuffed Bell Peppers | dinner | high-protein | 450 | 45 | 4 | bell peppers (4 large), beef mince (400g), cooked rice (1 cup), canned tomatoes (200g), onion (1), garlic (2 cloves), mozzarella (80g), Italian herbs | Cut pepper tops, remove seeds. Brown beef with onion, garlic. Mix with rice, tomatoes, herbs. Fill peppers, top with cheese. Bake 180°C 30 min.
+
+d32 | Seafood Paella | dinner | gluten-free | 560 | 45 | 4 | paella rice (300g), mixed seafood (400g), chicken stock (1L), saffron (pinch), onion (1), garlic (3 cloves), tomatoes (2), paprika (1 tsp), olive oil | Fry onion, garlic in oil. Add paprika, tomatoes. Toast rice. Add saffron stock, cook 15 min. Nestle seafood in rice, cook 10 min uncovered.
+
+d33 | Lemon Herb Roast Salmon | dinner | high-protein,low-carb,gluten-free | 400 | 20 | 2 | salmon fillet (2x180g), lemon (1), garlic (3 cloves), fresh dill (handful), olive oil (2 tbsp), capers (1 tbsp), cherry tomatoes (1 cup) | Arrange salmon and tomatoes in baking dish. Mix oil, lemon, garlic, dill. Pour over salmon. Scatter capers. Bake 200°C 15 min.
+
+d34 | Pork Schnitzel | dinner | high-protein | 520 | 20 | 2 | pork loin (2 pieces), breadcrumbs (1 cup), eggs (2), flour (¼ cup), lemon (1), oil for frying, salt, black pepper, potato salad (to serve) | Pound pork thin, season. Coat in flour, beaten egg, breadcrumbs. Fry in oil 3-4 min per side until golden brown. Serve with lemon wedges.
+
+d35 | One-Pot Lemon Chicken | dinner | high-protein,gluten-free,quick | 460 | 30 | 4 | chicken thighs (600g), lemon (1), garlic (5 cloves), chicken stock (300ml), thyme (3 sprigs), olives (½ cup), capers (2 tbsp), olive oil | Sear chicken skin-side down 8 min. Flip, add garlic, thyme, stock, lemon slices, olives, capers. Cover and cook 20 min until tender.
+
+d36 | Vegan Buddha Bowl | dinner | vegan,gluten-free | 480 | 30 | 2 | roasted sweet potato (1), quinoa (½ cup dry), kale (2 cups), chickpeas (200g roasted), avocado (1), tahini dressing (3 tbsp), pumpkin seeds (2 tbsp), turmeric | Roast chickpeas and sweet potato. Cook quinoa. Massage kale. Assemble bowls. Drizzle tahini dressing. Top with seeds.
+
+d37 | Creamy Garlic Shrimp | dinner | high-protein,low-carb,quick | 430 | 15 | 2 | shrimp (400g), garlic (4 cloves), heavy cream (150ml), butter (2 tbsp), parmesan (40g), spinach (80g), lemon juice, chili flakes, pasta (to serve) | Sear shrimp 2 min per side, set aside. Fry garlic in butter. Add cream, parmesan, spinach. Simmer 3 min. Return shrimp. Serve over pasta.
+
+d38 | Pasta Cacio e Pepe | dinner | vegetarian,quick | 490 | 15 | 2 | spaghetti (200g), pecorino romano (80g), parmesan (40g), black pepper (1 tbsp freshly ground), butter (1 tbsp), pasta water | Cook pasta al dente. Toast pepper in dry pan. Add butter, pasta water. Add pasta, toss. Remove from heat, add cheese gradually, toss vigorously.
+
+d39 | Chicken Fajita Bowl | dinner | high-protein,gluten-free | 490 | 20 | 2 | chicken breast (2), bell peppers (2), onion (1), fajita spice (1 tbsp), olive oil (1 tbsp), jasmine rice (½ cup dry), avocado (1), sour cream (2 tbsp), lime | Season chicken with fajita spice. Grill with peppers and onion. Slice chicken. Serve over rice with avocado, sour cream, lime.
+
+d40 | Fish Tacos | dinner | quick | 420 | 15 | 2 | white fish fillets (400g), corn tortillas (8), red cabbage (1 cup shredded), sour cream (3 tbsp), lime (1), avocado (1), chipotle sauce (1 tbsp), coriander | Coat fish in seasoned flour. Fry 3 min per side. Warm tortillas. Fill with fish, cabbage, avocado. Drizzle sour cream and chipotle. Lime and coriander.
+
+d41 | Vegan Lentil Curry | dinner | vegan,high-protein | 380 | 30 | 4 | red lentils (200g), coconut milk (400ml), canned tomatoes (400g), onion (1), garlic (3 cloves), ginger (1 tbsp), curry powder (2 tbsp), spinach (100g), naan | Sauté onion, garlic, ginger. Add curry powder, tomatoes, lentils, coconut milk. Simmer 20 min. Stir in spinach. Serve with naan.
+
+d42 | Chicken Alfredo Pasta | dinner | high-protein | 620 | 25 | 2 | fettuccine (200g), chicken breast (2), heavy cream (200ml), parmesan (80g), butter (2 tbsp), garlic (2 cloves), nutmeg (pinch), parsley | Cook pasta. Sear chicken 6 min per side. Slice. Fry garlic in butter, add cream, parmesan, nutmeg. Simmer 3 min. Toss with pasta and chicken.
+
+d43 | Moroccan Chicken Tagine | dinner | gluten-free | 480 | 50 | 4 | chicken thighs (600g), preserved lemon (½), olives (½ cup), onion (1), garlic (3 cloves), ras el hanout (2 tbsp), chicken stock (200ml), coriander, couscous | Brown chicken. Sauté onion, garlic, ras el hanout. Add stock, preserved lemon, olives. Simmer covered 35 min. Serve with couscous.
+
+d44 | Lamb Ragu Pasta | dinner | high-protein | 590 | 90 | 4 | lamb shoulder (600g minced), pappardelle (300g), canned tomatoes (400g), red wine (200ml), onion (1), carrot (1), celery (1), rosemary (2 sprigs), parmesan | Brown lamb with veg. Add wine, reduce. Add tomatoes, rosemary. Braise 60 min low. Toss with pasta. Top with parmesan.
+
+d45 | Grilled Veggie Skewers | dinner | vegan,gluten-free,low-calorie | 260 | 20 | 4 | zucchini (2), bell peppers (2), red onion (1), mushrooms (200g), cherry tomatoes (1 cup), olive oil (2 tbsp), balsamic vinegar (1 tbsp), herbs de Provence | Thread vegetables on skewers. Brush with oil-balsamic mix, herbs. Grill 4 min per side. Serve with couscous or flatbread.
+
+d46 | Beef Meatballs in Tomato | dinner | high-protein | 520 | 35 | 4 | beef mince (500g), breadcrumbs (½ cup), egg (1), garlic (2 cloves), canned tomatoes (400g), onion (1), basil (handful), parmesan (40g), pasta | Roll meatballs, sear in oil. Make sauce: sauté onion, add tomatoes, basil, simmer 15 min. Add meatballs, cook 15 min. Serve with pasta.
+
+d47 | Pan-Seared Scallops | dinner | high-protein,low-carb,gluten-free | 370 | 15 | 2 | scallops (400g), butter (2 tbsp), garlic (2 cloves), lemon (½), capers (1 tbsp), white wine (50ml), parsley, pea purée (to serve) | Pat scallops very dry. Sear in hot butter 2 min per side until golden. Remove. Add garlic, wine, capers to pan. Reduce 1 min. Serve scallops with sauce.
+
+d48 | Chicken Gyros | dinner | high-protein | 510 | 25 | 4 | chicken thighs (600g), pita bread (4), tzatziki (4 tbsp), tomato (2), red onion (1), fries (optional), Greek seasoning (1 tbsp), olive oil | Marinate chicken in Greek seasoning and oil. Grill until cooked through, 6 min per side. Slice. Fill pitas with chicken, tomato, onion, tzatziki.
+
+d49 | Creamy Mushroom Pasta | dinner | vegetarian | 510 | 20 | 2 | tagliatelle (200g), mixed mushrooms (300g), garlic (2 cloves), heavy cream (150ml), parmesan (50g), thyme (1 tsp), butter (1 tbsp), white wine (50ml) | Cook pasta. Sauté mushrooms with garlic and thyme in butter until golden. Add wine, reduce. Add cream, simmer 3 min. Toss with pasta and parmesan.
+
+d50 | Baked Chicken Thighs | dinner | high-protein,gluten-free,quick | 440 | 35 | 4 | chicken thighs (8 bone-in), garlic (4 cloves), olive oil (2 tbsp), paprika (1 tsp), thyme (1 tsp), lemon (1), salt, black pepper, green beans (to serve) | Mix oil, garlic, paprika, thyme, lemon, salt, pepper. Coat chicken. Bake 200°C 30 min until skin is golden and crisp. Serve with green beans.
+
+d51 | Steamed Mussels White Wine | dinner | quick,gluten-free | 380 | 15 | 2 | mussels (1kg cleaned), white wine (200ml), garlic (3 cloves), shallots (2), butter (2 tbsp), parsley (handful), cream (50ml), sourdough (to serve) | Sauté shallots and garlic in butter. Add wine and cream, bring to boil. Add mussels, cover 4-5 min until open. Top with parsley. Serve with bread.
+
+d52 | Italian Sausage Pasta | dinner | high-protein | 560 | 25 | 4 | Italian sausage (400g), rigatoni (300g), canned tomatoes (400g), onion (1), garlic (2 cloves), fennel seeds (½ tsp), red wine (100ml), parmesan | Remove sausage from casing, brown in pan. Sauté onion, garlic, fennel. Add wine, reduce. Add tomatoes, simmer 15 min. Toss with pasta.
+
+d53 | Thai Red Curry Chicken | dinner | gluten-free | 490 | 25 | 4 | chicken thighs (600g), coconut milk (400ml), red curry paste (3 tbsp), bamboo shoots (200g), fish sauce (1 tbsp), sugar (1 tsp), Thai basil, jasmine rice | Cook curry paste in oil 1 min. Add chicken, cook 5 min. Add coconut milk, bamboo shoots, fish sauce, sugar. Simmer 15 min. Serve with rice and basil.
+
+d54 | Garlic Butter Salmon | dinner | high-protein,low-carb,quick | 440 | 15 | 2 | salmon fillets (2x180g), butter (3 tbsp), garlic (3 cloves), lemon (1), capers (1 tbsp), dill (handful), asparagus (200g) | Pan-sear salmon in butter 4 min per side. Add garlic, capers, lemon juice in last minute. Grill asparagus. Serve with fresh dill.
+
+d55 | Pork Belly Tacos | dinner | high-protein | 580 | 90 | 4 | pork belly (600g), corn tortillas (8), lime (1), red cabbage (1 cup), pickled jalapeños (2 tbsp), sour cream (3 tbsp), coriander, soy-hoisin glaze (3 tbsp) | Braise pork belly in soy-hoisin glaze 60 min until tender. Slice, caramelize cut side in pan. Warm tortillas. Fill with pork, cabbage, jalapeños, sour cream.
+
+
+SNACK & DESSERT (20)
+
+s01 | Chocolate Mousse | snack | vegetarian,gluten-free | 320 | 15 | 4 | dark chocolate (200g), eggs (4 separated), sugar (2 tbsp), heavy cream (50ml), vanilla (½ tsp) | Melt chocolate. Whisk yolks with sugar, fold into chocolate. Whip cream, fold in. Whip egg whites to peaks, fold gently. Chill 2h.
+
+s02 | Apple Crumble | snack | vegetarian | 380 | 40 | 4 | apples (4 large), oats (1 cup), butter (80g), brown sugar (60g), flour (½ cup), cinnamon (1 tsp), lemon juice (1 tbsp) | Peel and slice apples, toss with lemon and cinnamon. Place in dish. Mix oats, flour, sugar, butter into crumble. Top apples. Bake 180°C 30 min.
+
+s03 | Chocolate Brownies | snack | vegetarian | 340 | 30 | 16 | dark chocolate (200g), butter (100g), sugar (150g), eggs (3), flour (80g), cocoa powder (2 tbsp), vanilla (1 tsp), salt | Melt chocolate and butter. Whisk with sugar. Add eggs one at a time. Fold in flour, cocoa, salt. Bake 180°C 20-22 min until just set.
+
+s04 | Mango Sorbet | snack | vegan,gluten-free,low-calorie | 180 | 5 | 4 | frozen mango (600g), lime juice (2 tbsp), honey (2 tbsp), coconut water (¼ cup) | Blend all ingredients until smooth. Serve immediately as soft-serve, or freeze 2h for firmer texture.
+
+s05 | Tiramisu | snack | vegetarian | 420 | 20 | 6 | mascarpone (500g), eggs (4 separated), sugar (80g), espresso (200ml), ladyfinger biscuits (200g), cocoa powder, Kahlúa (2 tbsp) | Whisk yolks with sugar until pale. Fold in mascarpone. Whip whites, fold in. Dip biscuits in espresso-Kahlúa. Layer biscuits and cream. Dust cocoa. Chill 4h.
+
+s06 | Greek Yogurt Bark | snack | vegetarian,gluten-free,low-calorie | 190 | 5 | 4 | Greek yogurt (400g), honey (2 tbsp), mixed berries (1 cup), granola (¼ cup), pistachios (2 tbsp) | Spread yogurt on lined tray. Drizzle honey. Scatter berries, granola, pistachios. Freeze 3h. Break into pieces.
+
+s07 | Hummus with Veg | snack | vegan,gluten-free,low-calorie | 200 | 5 | 2 | hummus (200g), carrot (2), cucumber (1), bell pepper (1), celery (2 sticks), pita chips (½ cup), olive oil (1 tsp), paprika | Arrange vegetables cut into sticks around hummus. Drizzle oil on hummus, dust paprika. Serve with pita chips.
+
+s08 | Roasted Chickpeas | snack | vegan,gluten-free | 210 | 35 | 4 | chickpeas (2 tins drained), olive oil (2 tbsp), smoked paprika (1 tsp), cumin (½ tsp), garlic powder (½ tsp), salt, cayenne (pinch) | Pat chickpeas very dry. Toss with oil and spices. Roast 200°C 25-30 min shaking halfway, until crispy.
+
+s09 | Guacamole and Chips | snack | vegan,gluten-free | 290 | 8 | 2 | avocados (2 ripe), lime (1), red onion (¼), tomato (1), jalapeño (½), coriander (handful), salt, tortilla chips (to serve) | Mash avocados. Mix in lime juice, finely diced onion, tomato, jalapeño, coriander, salt. Serve with chips.
+
+s10 | Protein Energy Balls | snack | vegan,gluten-free,high-protein | 180 | 10 | 12 | rolled oats (1 cup), peanut butter (½ cup), honey (3 tbsp), protein powder (1 scoop), dark chocolate chips (50g), chia seeds (1 tbsp) | Mix all ingredients until combined. Roll into balls. Refrigerate 30 min to set.
+
+s11 | Banana Ice Cream | snack | vegan,gluten-free,low-calorie | 150 | 5 | 2 | frozen bananas (3), peanut butter (1 tbsp), cocoa powder (1 tbsp), vanilla (½ tsp) | Blend frozen bananas until smooth and creamy. Add peanut butter, cocoa, vanilla. Blend again. Serve immediately.
+
+s12 | Dark Chocolate Bark | snack | vegan,gluten-free | 220 | 10 | 8 | dark chocolate (300g), pistachios (50g), dried cranberries (50g), sea salt flakes (½ tsp), orange zest (1 tsp) | Melt chocolate over bain-marie. Spread thin on lined tray. Scatter pistachios, cranberries, orange zest, sea salt. Chill until set. Break into shards.
+
+s13 | Caprese Bites | snack | vegetarian,gluten-free,low-calorie | 160 | 8 | 2 | cherry tomatoes (250g), mini mozzarella balls (200g), basil leaves (handful), olive oil (1 tbsp), balsamic glaze (1 tbsp), salt, black pepper | Thread tomato, basil, mozzarella onto skewers. Drizzle with oil and balsamic glaze. Season.
+
+s14 | Frozen Yogurt Bark | snack | vegetarian,gluten-free,low-calorie | 170 | 5 | 4 | plain yogurt (400g), honey (2 tbsp), strawberries (1 cup sliced), kiwi (2 sliced), shredded coconut (2 tbsp) | Mix yogurt and honey. Spread on tray. Top with fruit and coconut. Freeze 3h. Break into pieces and serve.
+
+s15 | Panna Cotta with Berries | snack | vegetarian,gluten-free | 290 | 15 | 4 | heavy cream (400ml), milk (100ml), sugar (50g), vanilla (1 pod), gelatin (3 sheets), mixed berries (200g), honey (1 tbsp) | Heat cream, milk, sugar, vanilla. Dissolve soaked gelatin. Pour into moulds. Chill 4h. Serve with berries and honey.
+
+s16 | Almond Energy Bites | snack | vegan,gluten-free | 190 | 10 | 12 | almond flour (1 cup), almond butter (½ cup), honey (2 tbsp), vanilla (1 tsp), dark chocolate chips (50g), sea salt | Combine all ingredients. Roll into 12 balls. Refrigerate 20 min to firm up.
+
+s17 | Mini Cheesecakes | snack | vegetarian | 310 | 30 | 6 | cream cheese (300g), digestive biscuits (150g), butter (60g), sugar (60g), eggs (2), vanilla (1 tsp), lemon (½), berry compote (to serve) | Crush biscuits with butter for base. Press into lined muffin tin. Beat cream cheese, sugar, eggs, vanilla, lemon. Pour over bases. Bake 160°C 20 min.
+
+s18 | Chocolate Chip Cookies | snack | vegetarian | 280 | 25 | 12 | flour (200g), butter (125g), brown sugar (100g), sugar (50g), egg (1), vanilla (1 tsp), baking soda (½ tsp), dark chocolate chips (150g), salt | Cream butter and sugars. Beat in egg and vanilla. Fold in flour, soda, salt, chips. Scoop onto tray. Bake 180°C 10-12 min.
+
+s19 | Popcorn with Sea Salt | snack | vegan,gluten-free,low-calorie | 130 | 8 | 4 | popcorn kernels (½ cup), coconut oil (1 tbsp), sea salt flakes (½ tsp), nutritional yeast (1 tbsp, optional) | Heat oil in large pot over medium heat. Add kernels, cover. Shake often until popping stops. Season with sea salt and nutritional yeast.
+
+s20 | Carrot Cake | snack | vegetarian | 350 | 45 | 12 | grated carrot (300g), flour (250g), sugar (200g), vegetable oil (150ml), eggs (3), cinnamon (1½ tsp), baking soda (1 tsp), walnuts (80g), cream cheese frosting | Whisk oil, sugar, eggs. Add grated carrot. Fold in flour, cinnamon, soda, walnuts. Bake 180°C 30 min. Cool, frost with cream cheese icing.

@@ -39,3 +39,6 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# scraped recipe database, build it with scraper/
+assets/recipes.db

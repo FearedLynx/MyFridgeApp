@@ -29,7 +29,8 @@ export default function RecipeCard({
   recipe, onPress, substitutions, missingIngredients,
 }: Props) {
   const { colors } = useTheme();
-  const { favorites, toggleFavorite } = useApp();
+  const { favorites, toggleFavorite, ratings } = useApp();
+  const myRating = ratings[recipe.id] ?? 0;
   const isFav = favorites.includes(recipe.id);
   const accentColor = useMemo(() => getRecipeColor(recipe), [recipe]);
   const styles = useMemo(() => createStyles(colors), [colors]);
@@ -62,6 +63,12 @@ export default function RecipeCard({
           <>
             <Text style={styles.dot}>·</Text>
             <Text style={styles.metaItem}>{recipe.servings} srv</Text>
+          </>
+        )}
+        {myRating > 0 && (
+          <>
+            <Text style={styles.dot}>·</Text>
+            <Text style={styles.ratingBadge}>{'★'.repeat(myRating)}</Text>
           </>
         )}
       </View>
@@ -107,6 +114,7 @@ const createStyles = (colors: any) => StyleSheet.create({
   meta:        { flexDirection: 'row', alignItems: 'center', marginBottom: spacing.xs },
   metaItem:    { fontSize: font.sizes.xs, color: colors.textMuted, fontWeight: font.weights.medium },
   dot:         { color: colors.border, marginHorizontal: 4 },
+  ratingBadge: { fontSize: font.sizes.xs, color: '#F59E0B', letterSpacing: 1 },
   tags:        { flexDirection: 'row', flexWrap: 'wrap', gap: 4 },
   tag:         { paddingHorizontal: 6, paddingVertical: 2, borderRadius: radius.sm },
   tagText:     { fontSize: font.sizes.xs, fontWeight: font.weights.semibold, letterSpacing: 0.3 },

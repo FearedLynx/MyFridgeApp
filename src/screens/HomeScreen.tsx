@@ -261,9 +261,10 @@ export default function HomeScreen({ navigation }: Props) {
               >
                 <View style={styles.dayCardLeft}>
                   <Text style={[styles.dayName, isToday && { color: colors.primary }]}>
-                    {isToday ? 'Today' : DAY_LABELS[i]}
+                    {DAY_LABELS[i]}
                   </Text>
                   <Text style={styles.dayNum}>{dateLabel(date)}</Text>
+                  {isToday && <View style={[styles.todayDot, { backgroundColor: colors.primary }]} />}
                 </View>
                 <View style={styles.dayCardRight}>
                   {count > 0 && (
@@ -398,6 +399,7 @@ const createStyles = (colors: any) => StyleSheet.create({
   dayCardLeft:    { flexDirection: 'row', alignItems: 'baseline', gap: spacing.xs, flex: 1 },
   dayName:        { fontSize: font.sizes.md, fontWeight: font.weights.bold, color: colors.text },
   dayNum:         { fontSize: font.sizes.sm, color: colors.textMuted },
+  todayDot:       { width: 6, height: 6, borderRadius: 3, marginLeft: spacing.xs, marginBottom: 1 },
   dayCardRight:   { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
   mealCountChip:  { backgroundColor: colors.border, borderRadius: radius.sm, paddingHorizontal: spacing.sm, paddingVertical: 2 },
   mealCountText:  { fontSize: font.sizes.xs, color: colors.textSecondary, fontWeight: font.weights.medium },

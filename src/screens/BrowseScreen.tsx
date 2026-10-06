@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import {
   View, Text, StyleSheet, TouchableOpacity,
-  SafeAreaView, TextInput, FlatList, ScrollView,
+  SafeAreaView, TextInput, FlatList, ScrollView, Alert,
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
@@ -32,20 +32,33 @@ const TIMES: { key: MealTime; label: string }[] = [
   { key: 'snack',     label: 'Snack' },
 ];
 
-type SortKey = 'default' | 'cal-asc' | 'cal-desc' | 'time-asc' | 'time-desc';
-const SORTS: { key: SortKey; label: string }[] = [
-  { key: 'default',   label: 'Default' },
-  { key: 'cal-asc',   label: 'Cal ↑' },
-  { key: 'cal-desc',  label: 'Cal ↓' },
-  { key: 'time-asc',  label: 'Time ↑' },
-  { key: 'time-desc', label: 'Time ↓' },
-];
+type SortKey = 'default' | 'cal-asc' | 'cal-desc' | 'time-asc' | 'time-desc' | 'top-rated';
 
-function sortRecipes(recipes: Recipe[], sort: SortKey): Recipe[] {
+// Cal and Time each cycle: off → asc → desc → off
+const SORT_CYCLE: Record<string, SortKey> = {
+  'default-cal':  'cal-asc',
+  'cal-asc':      'cal-desc',
+  'cal-desc':     'default',
+  'default-time': 'time-asc',
+  'time-asc':     'time-desc',
+  'time-desc':    'default',
+};
+
+const SORT_LABELS: Record<SortKey, string> = {
+  'default':   '',
+  'cal-asc':   'Cal ↑',
+  'cal-desc':  'Cal ↓',
+  'time-asc':  'Time ↑',
+  'time-desc': 'Time ↓',
+  'top-rated': '★ Rated',
+};
+
+function sortRecipes(recipes: Recipe[], sort: SortKey, ratings: Record<string, number>): Recipe[] {
   if (sort === 'default') return recipes;
   return [...recipes].sort((a, b) => {
-    if (sort === 'cal-asc')  return a.calories - b.calories;
-    if (sort === 'cal-desc') return b.calories - a.calories;
+    if (sort === 'cal-asc')   return a.calories - b.calories;
+    if (sort === 'cal-desc')  return b.calories - a.calories;
+    if (sort === 'top-rated') return (ratings[b.id] ?? 0) - (ratings[a.id] ?? 0);
     const ta = a.timeBreakdown?.totalMinutes ?? a.total_minutes ?? 0;
     const tb = b.timeBreakdown?.totalMinutes ?? b.total_minutes ?? 0;
     if (sort === 'time-asc')  return ta - tb;
@@ -65,7 +78,7 @@ const DIET_TAG_MAP: Record<string, DietTag> = {
 };
 
 export default function BrowseScreen({ navigation, route }: Props) {
-  const { dbRecipes, userRecipes, addMealForTime, recentlyViewed, trackViewed, preferences } = useApp();
+  const { dbRecipes, userRecipes, addMealForTime, recentlyViewed, trackViewed, preferences, ratings } = useApp();
   const { colors } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
 
@@ -120,8 +133,8 @@ export default function BrowseScreen({ navigation, route }: Props) {
       ];
     }
 
-    return sortRecipes(base, sort);
-  }, [allRecipes, search, selectedTime, selectedTags, sort, preferences]);
+    return sortRecipes(base, sort, ratings);
+  }, [allRecipes, search, selectedTime, selectedTags, sort, preferences, ratings]);
 
   const isFiltered = search.trim().length > 0 || selectedTags.length > 0 || selectedTime !== null;
 
@@ -145,12 +158,46 @@ export default function BrowseScreen({ navigation, route }: Props) {
     }
   }, [assignTo, addMealForTime, navigation, trackViewed]);
 
-  const handleSurprise = useCallback(() => {
-    if (filtered.length === 0) return;
-    const pick = filtered[Math.floor(Math.random() * filtered.length)];
+  const pickRandom = useCallback((pool: Recipe[]) => {
+    if (pool.length === 0) return;
+    const pick = pool[Math.floor(Math.random() * pool.length)];
     trackViewed(pick.id);
     navigation.navigate('RecipeDetail', { recipeId: pick.id });
-  }, [filtered, navigation, trackViewed]);
+  }, [navigation, trackViewed]);
+
+  const handleSurprise = useCallback(() => {
+    if (allRecipes.length === 0) return;
+
+    const hasPrefs = preferences.diet !== 'none' || preferences.cuisines.length > 0;
+
+    if (!hasPrefs) {
+      // No preferences set — just pick from current filtered pool
+      pickRandom(filtered);
+      return;
+    }
+
+    const prefDietTag = DIET_TAG_MAP[preferences.diet] as DietTag | undefined;
+    const prefPool = allRecipes.filter(r => {
+      if (prefDietTag && !(r.tags ?? []).includes(prefDietTag)) return false;
+      return true;
+    });
+
+    Alert.alert(
+      'Surprise me!',
+      'Pick a recipe from:',
+      [
+        {
+          text: 'Match my preferences',
+          onPress: () => pickRandom(prefPool.length > 0 ? prefPool : allRecipes),
+        },
+        {
+          text: 'Any recipe',
+          onPress: () => pickRandom(allRecipes),
+        },
+        { text: 'Cancel', style: 'cancel' },
+      ],
+    );
+  }, [allRecipes, filtered, preferences, pickRandom]);
 
   const renderItem = useCallback(({ item }: { item: Recipe }) => (
     <RecipeCard recipe={item} onPress={() => handleSelect(item.id)} />
@@ -233,17 +280,41 @@ export default function BrowseScreen({ navigation, route }: Props) {
 
             {/* Sort */}
             <Text style={styles.filterLabel}>Sort</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.sortRow}>
-              {SORTS.map(({ key, label }) => (
-                <TouchableOpacity
-                  key={key}
-                  style={[styles.chip, sort === key && styles.chipActive, styles.sortChip]}
-                  onPress={() => setSort(key)}
-                >
-                  <Text style={[styles.chipText, sort === key && styles.chipTextActive]}>{label}</Text>
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
+            <View style={[styles.chipRow, { marginBottom: spacing.md }]}>
+              {/* Cal toggle */}
+              <TouchableOpacity
+                style={[styles.chip, (sort === 'cal-asc' || sort === 'cal-desc') && styles.chipActive]}
+                onPress={() => {
+                  const next = SORT_CYCLE[sort === 'cal-asc' || sort === 'cal-desc' ? sort : 'default-cal'];
+                  setSort(next);
+                }}
+              >
+                <Text style={[styles.chipText, (sort === 'cal-asc' || sort === 'cal-desc') && styles.chipTextActive]}>
+                  {sort === 'cal-asc' ? 'Cal ↑' : sort === 'cal-desc' ? 'Cal ↓' : 'Cal'}
+                </Text>
+              </TouchableOpacity>
+
+              {/* Time toggle */}
+              <TouchableOpacity
+                style={[styles.chip, (sort === 'time-asc' || sort === 'time-desc') && styles.chipActive]}
+                onPress={() => {
+                  const next = SORT_CYCLE[sort === 'time-asc' || sort === 'time-desc' ? sort : 'default-time'];
+                  setSort(next);
+                }}
+              >
+                <Text style={[styles.chipText, (sort === 'time-asc' || sort === 'time-desc') && styles.chipTextActive]}>
+                  {sort === 'time-asc' ? 'Time ↑' : sort === 'time-desc' ? 'Time ↓' : 'Time'}
+                </Text>
+              </TouchableOpacity>
+
+              {/* Top rated */}
+              <TouchableOpacity
+                style={[styles.chip, sort === 'top-rated' && styles.chipActive]}
+                onPress={() => setSort(prev => prev === 'top-rated' ? 'default' : 'top-rated')}
+              >
+                <Text style={[styles.chipText, sort === 'top-rated' && styles.chipTextActive]}>★ Rated</Text>
+              </TouchableOpacity>
+            </View>
 
             {/* Recently viewed */}
             {recentRecipes.length > 0 && (
@@ -293,8 +364,6 @@ const createStyles = (colors: any) => StyleSheet.create({
   suggestionText:  { fontSize: font.sizes.md, color: colors.text },
   filterLabel:     { fontSize: font.sizes.xs, fontWeight: font.weights.bold, color: colors.textMuted, textTransform: 'uppercase', letterSpacing: 1, marginBottom: spacing.xs },
   chipRow:         { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.xs, marginBottom: spacing.md },
-  sortRow:         { marginBottom: spacing.md },
-  sortChip:        { marginRight: spacing.xs },
   chip:            { paddingHorizontal: spacing.md, paddingVertical: spacing.xs + 2, borderRadius: radius.lg, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
   chipActive:      { backgroundColor: colors.primary, borderColor: colors.primary },
   chipText:        { fontSize: font.sizes.sm, color: colors.textSecondary, fontWeight: font.weights.medium },

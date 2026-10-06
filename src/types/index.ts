@@ -56,6 +56,12 @@ export interface TimeBreakdown {
   totalMinutes: number;
 }
 
+export interface Macros {
+  protein: number; // grams
+  carbs: number;   // grams
+  fat: number;     // grams
+}
+
 export interface Recipe {
   id: string;
   name: string;
@@ -67,6 +73,7 @@ export interface Recipe {
   ingredients: RecipeIngredient[];
   sections: StepSection[];
   timeBreakdown: TimeBreakdown;
+  macros?: Macros;
   isUserCreated?: boolean;
   isCommunity?: boolean;
   author?: string;

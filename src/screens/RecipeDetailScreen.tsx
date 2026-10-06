@@ -8,8 +8,22 @@ import { RouteProp } from '@react-navigation/native';
 import { useApp } from '../context/AppContext';
 import { useTheme } from '../context/ThemeContext';
 import { spacing, radius, font } from '../utils/theme';
-import { StepSectionType } from '../types';
+import { Macros, StepSectionType } from '../types';
 import { getRecipeColor } from '../utils/recipeColor';
+
+function estimateMacros(calories: number, tags: string[]): Macros {
+  let p = 0.20, c = 0.45, f = 0.35;
+  if (tags.includes('high-protein'))     { p = 0.35; c = 0.35; f = 0.30; }
+  else if (tags.includes('low-carb'))    { p = 0.35; c = 0.15; f = 0.50; }
+  else if (tags.includes('vegan'))       { p = 0.15; c = 0.60; f = 0.25; }
+  else if (tags.includes('vegetarian'))  { p = 0.18; c = 0.52; f = 0.30; }
+  else if (tags.includes('low-calorie')) { p = 0.25; c = 0.45; f = 0.30; }
+  return {
+    protein: Math.round(calories * p / 4),
+    carbs:   Math.round(calories * c / 4),
+    fat:     Math.round(calories * f / 9),
+  };
+}
 
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -31,12 +45,13 @@ const TAG_LABELS: Record<string, string> = {
 };
 
 export default function RecipeDetailScreen({ navigation, route }: Props) {
-  const { favorites, toggleFavorite, userRecipes, dbRecipes, trackViewed, logCooked } = useApp();
+  const { favorites, toggleFavorite, userRecipes, dbRecipes, trackViewed, logCooked, rateRecipe, removeFromFridge, ratings } = useApp();
   const { colors } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
   const recipeId: string = route.params?.recipeId;
-  const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
-  const [madeit, setMadeit] = useState(false);
+  const [collapsed, setCollapsed]   = useState<Record<number, boolean>>({});
+  const [madeit, setMadeit]         = useState(false);
+  const [fridgeDone, setFridgeDone] = useState(false);
 
   const recipe = useMemo(() => {
     const all = [...userRecipes, ...dbRecipes];
@@ -189,11 +204,84 @@ export default function RecipeDetailScreen({ navigation, route }: Props) {
             })}
           </>
         )}
+        {/* Macros */}
+        {(() => {
+          const macros = recipe.macros ?? estimateMacros(recipe.calories ?? 0, recipe.tags ?? []);
+          return (
+            <View style={styles.macrosCard}>
+              <Text style={styles.sectionHeading}>Nutrition (per serving)</Text>
+              <View style={styles.macrosRow}>
+                <View style={styles.macroBox}>
+                  <Text style={styles.macroValue}>{macros.protein}g</Text>
+                  <Text style={styles.macroLabel}>Protein</Text>
+                </View>
+                <View style={[styles.macroBox, styles.macroBoxMid]}>
+                  <Text style={styles.macroValue}>{macros.carbs}g</Text>
+                  <Text style={styles.macroLabel}>Carbs</Text>
+                </View>
+                <View style={styles.macroBox}>
+                  <Text style={styles.macroValue}>{macros.fat}g</Text>
+                  <Text style={styles.macroLabel}>Fat</Text>
+                </View>
+              </View>
+              {!recipe.macros && (
+                <Text style={styles.macrosEstNote}>Estimated from calorie & tag data</Text>
+              )}
+            </View>
+          );
+        })()}
+
         {/* I Made This */}
         <View style={styles.madeitSection}>
           {madeit ? (
             <View style={styles.madeitDone}>
-              <Text style={styles.madeitDoneText}>Logged {recipe.calories} kcal to today's tracker</Text>
+              <Text style={styles.madeitDoneText}>Logged {recipe.calories} kcal</Text>
+
+              {/* Star rating */}
+              <Text style={styles.ratePrompt}>How was it?</Text>
+              <View style={styles.starsRow}>
+                {[1,2,3,4,5].map(star => {
+                  const current = ratings[recipe.id] ?? 0;
+                  return (
+                    <TouchableOpacity key={star} onPress={() => rateRecipe(recipe.id, star)}>
+                      <Text style={[styles.star, star <= current && styles.starActive]}>★</Text>
+                    </TouchableOpacity>
+                  );
+                })}
+              </View>
+              {ratings[recipe.id] > 0 && (
+                <Text style={styles.ratedText}>{ratings[recipe.id]} / 5 saved</Text>
+              )}
+
+              {/* Fridge depletion */}
+              {!fridgeDone && (
+                <TouchableOpacity
+                  style={styles.depleteFridgeBtn}
+                  onPress={() => {
+                    Alert.alert(
+                      'Remove used ingredients?',
+                      'This will remove this recipe\'s ingredients from your fridge.',
+                      [
+                        { text: 'Keep fridge as-is', style: 'cancel' },
+                        {
+                          text: 'Remove them',
+                          onPress: () => {
+                            for (const ing of recipe.ingredients ?? []) {
+                              removeFromFridge(ing.ingredientId);
+                            }
+                            setFridgeDone(true);
+                          },
+                        },
+                      ]
+                    );
+                  }}
+                >
+                  <Text style={styles.depleteFridgeBtnText}>Remove ingredients from fridge</Text>
+                </TouchableOpacity>
+              )}
+              {fridgeDone && (
+                <Text style={styles.fridgeDoneText}>Fridge updated</Text>
+              )}
             </View>
           ) : (
             <TouchableOpacity
@@ -271,9 +359,26 @@ const createStyles = (colors: any) => StyleSheet.create({
   stepInstruction:   { fontSize: font.sizes.md, color: colors.text, lineHeight: 22 },
   cutBadge:          { marginTop: 4, alignSelf: 'flex-start', backgroundColor: colors.primaryLight, borderRadius: radius.sm, paddingHorizontal: 8, paddingVertical: 2 },
   cutBadgeText:      { fontSize: font.sizes.xs, color: colors.primary, fontWeight: font.weights.semibold, letterSpacing: 0.5 },
-  madeitSection:    { marginHorizontal: spacing.md, marginTop: spacing.xl, marginBottom: spacing.lg },
+  // Macros
+  macrosCard:       { marginHorizontal: spacing.md, marginTop: spacing.lg },
+  macrosRow:        { flexDirection: 'row', backgroundColor: colors.surface, borderRadius: radius.md, borderWidth: 1, borderColor: colors.border, overflow: 'hidden' },
+  macroBox:         { flex: 1, alignItems: 'center', paddingVertical: spacing.md },
+  macroBoxMid:      { borderLeftWidth: 1, borderRightWidth: 1, borderColor: colors.border },
+  macroValue:       { fontSize: font.sizes.lg, fontWeight: font.weights.bold, color: colors.text },
+  macroLabel:       { fontSize: font.sizes.xs, color: colors.textMuted, marginTop: 2, textTransform: 'uppercase', letterSpacing: 0.5 },
+  macrosEstNote:    { fontSize: font.sizes.xs, color: colors.textMuted, textAlign: 'center', marginTop: spacing.xs, fontStyle: 'italic' },
+  // I Made This
+  madeitSection:    { marginHorizontal: spacing.md, marginTop: spacing.lg, marginBottom: spacing.lg },
   madeitBtn:        { backgroundColor: colors.primary, borderRadius: radius.md, padding: spacing.md + 2, alignItems: 'center' },
   madeitBtnText:    { color: '#fff', fontSize: font.sizes.lg, fontWeight: font.weights.bold },
-  madeitDone:       { backgroundColor: colors.primaryLight, borderRadius: radius.md, padding: spacing.md, alignItems: 'center' },
+  madeitDone:       { backgroundColor: colors.primaryLight, borderRadius: radius.md, padding: spacing.md, alignItems: 'center', gap: spacing.sm },
   madeitDoneText:   { color: colors.primary, fontSize: font.sizes.md, fontWeight: font.weights.semibold },
+  ratePrompt:       { fontSize: font.sizes.sm, color: colors.textMuted, marginTop: spacing.xs },
+  starsRow:         { flexDirection: 'row', gap: spacing.sm },
+  star:             { fontSize: 28, color: colors.border },
+  starActive:       { color: '#F59E0B' },
+  ratedText:        { fontSize: font.sizes.xs, color: colors.textMuted },
+  depleteFridgeBtn: { marginTop: spacing.xs, borderWidth: 1, borderColor: colors.primary, borderRadius: radius.md, paddingHorizontal: spacing.md, paddingVertical: spacing.sm },
+  depleteFridgeBtnText: { color: colors.primary, fontSize: font.sizes.sm, fontWeight: font.weights.semibold },
+  fridgeDoneText:   { fontSize: font.sizes.sm, color: colors.textMuted, fontStyle: 'italic' },
 });

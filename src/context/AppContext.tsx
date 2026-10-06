@@ -50,8 +50,10 @@ interface AppContextType {
   setPreferences: (prefs: UserPreferences) => void;
   recentlyViewed: string[];
   trackViewed: (recipeId: string) => void;
+  ratings: Record<string, number>;
+  rateRecipe: (recipeId: string, stars: number) => void;
   shoppingList: ShoppingItem[];
-  addShoppingItem: (name: string) => void;
+  addShoppingItem: (name: string, recipeNames?: string[]) => void;
   toggleShoppingItem: (id: string) => void;
   removeShoppingItem: (id: string) => void;
   clearChecked: () => void;
@@ -113,6 +115,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [userRecipes, setUserRecipes]       = useState<Recipe[]>([]);
   const [preferences, setPrefsState]        = useState<UserPreferences>(DEFAULT_PREFS);
   const [recentlyViewed, setRecentlyViewed] = useState<string[]>([]);
+  const [ratings, setRatings]               = useState<Record<string, number>>({});
   const [shoppingList, setShoppingList]     = useState<ShoppingItem[]>([]);
 
   const dailyPlan: DailyPlan = weekPlan[TODAY] ?? emptyPlan(TODAY);
@@ -120,7 +123,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     (async () => {
       try {
-        const [f, fav, wp, oldPlan, ur, prefs, rv, cl] = await Promise.all([
+        const [f, fav, wp, oldPlan, ur, prefs, rv, cl, rt] = await Promise.all([
           AsyncStorage.getItem('fridge'),
           AsyncStorage.getItem('favorites'),
           AsyncStorage.getItem('weekPlan'),
@@ -129,11 +132,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
           AsyncStorage.getItem('preferences'),
           AsyncStorage.getItem('recentlyViewed'),
           AsyncStorage.getItem('cookedLog'),
+          AsyncStorage.getItem('ratings'),
         ]);
         if (f)   setFridge(JSON.parse(f));
         if (fav) setFavorites(JSON.parse(fav));
         if (rv)  setRecentlyViewed(JSON.parse(rv));
         if (cl)  setCookedLog(JSON.parse(cl));
+        if (rt)  setRatings(JSON.parse(rt));
         if (ur)  setUserRecipes(JSON.parse(ur));
         if (prefs) setPrefsState({ ...DEFAULT_PREFS, ...JSON.parse(prefs) });
 
@@ -279,11 +284,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  const addShoppingItem = (name: string) => {
+  const addShoppingItem = (name: string, recipeNames?: string[]) => {
     const trimmed = name.trim();
     if (!trimmed) return;
     setShoppingList(prev => {
-      const next = [...prev, { id: `manual-${Date.now()}`, name: trimmed, checked: false, source: 'manual' as const }];
+      // Don't duplicate existing items with same name
+      if (prev.some(i => i.name.toLowerCase() === trimmed.toLowerCase())) return prev;
+      const next = [...prev, { id: `manual-${Date.now()}-${Math.random()}`, name: trimmed, checked: false, source: 'manual' as const, recipeNames }];
       persist('shoppingListManual', next.filter(i => i.source === 'manual'));
       return next;
     });
@@ -313,6 +320,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  const rateRecipe = (recipeId: string, stars: number) => {
+    setRatings(prev => {
+      const next = { ...prev, [recipeId]: stars };
+      persist('ratings', next);
+      return next;
+    });
+  };
+
   const trackViewed = (recipeId: string) => {
     setRecentlyViewed(prev => {
       const next = [recipeId, ...prev.filter(id => id !== recipeId)].slice(0, RECENTLY_VIEWED_MAX);
@@ -332,6 +347,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       userRecipes, addRecipe,
       preferences, setPreferences,
       recentlyViewed, trackViewed,
+      ratings, rateRecipe,
       shoppingList, addShoppingItem, toggleShoppingItem, removeShoppingItem, clearChecked, refreshShoppingList,
     }}>
       {children}

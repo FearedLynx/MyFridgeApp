@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { View, Text, StyleSheet, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useApp } from '../context/AppContext';
@@ -21,7 +21,7 @@ const TAGS: { key: DietTag; label: string }[] = [
 ];
 
 export default function CookScreen({ navigation }: Props) {
-  const { dbRecipes, fridge, userRecipes } = useApp();
+  const { dbRecipes, fridge, userRecipes, addShoppingItem } = useApp();
   const { colors } = useTheme();
   const styles = useMemo(() => createStyles(colors), [colors]);
   const [selectedTags, setSelectedTags] = useState<DietTag[]>([]);
@@ -41,6 +41,12 @@ export default function CookScreen({ navigation }: Props) {
 
   const exact = filtered.filter(r => r.matchType === 'exact');
   const near  = filtered.filter(r => r.matchType === 'near');
+
+  const addMissingToList = useCallback((missingIngredients: { name: string }[], recipeName: string) => {
+    for (const ing of missingIngredients) {
+      addShoppingItem(ing.name, [recipeName]);
+    }
+  }, [addShoppingItem]);
 
   if (fridge.length === 0) {
     return (
@@ -106,9 +112,21 @@ export default function CookScreen({ navigation }: Props) {
               <Text style={styles.sectionCount}>{near.length}</Text>
             </View>
             {near.map(r => (
-              <RecipeCard key={r.recipe.id} recipe={r.recipe}
-                substitutions={r.substitutions} missingIngredients={r.missingIngredients}
-                onPress={() => navigation.navigate('RecipeDetail', { recipeId: r.recipe.id })} />
+              <View key={r.recipe.id}>
+                <RecipeCard recipe={r.recipe}
+                  substitutions={r.substitutions} missingIngredients={r.missingIngredients}
+                  onPress={() => navigation.navigate('RecipeDetail', { recipeId: r.recipe.id })} />
+                {r.missingIngredients.length > 0 && (
+                  <TouchableOpacity
+                    style={styles.addMissingBtn}
+                    onPress={() => addMissingToList(r.missingIngredients, r.recipe.name)}
+                  >
+                    <Text style={styles.addMissingBtnText}>
+                      + Add {r.missingIngredients.length} missing to shopping list
+                    </Text>
+                  </TouchableOpacity>
+                )}
+              </View>
             ))}
           </View>
         )}
@@ -159,4 +177,6 @@ const createStyles = (colors: any) => StyleSheet.create({
   noMatchText:    { fontSize: font.sizes.md, color: colors.textSecondary, textAlign: 'center', marginBottom: spacing.md },
   clearBtn:       { backgroundColor: colors.primaryLight, borderRadius: radius.md, paddingHorizontal: spacing.lg, paddingVertical: spacing.sm },
   clearBtnText:   { color: colors.primary, fontWeight: font.weights.semibold, fontSize: font.sizes.sm },
+  addMissingBtn:  { marginTop: -spacing.xs, marginBottom: spacing.sm, marginHorizontal: 1, backgroundColor: colors.primaryLight, borderRadius: radius.sm, paddingVertical: spacing.xs + 2, paddingHorizontal: spacing.md, alignSelf: 'flex-start' },
+  addMissingBtnText: { fontSize: font.sizes.xs, color: colors.primary, fontWeight: font.weights.semibold },
 });
